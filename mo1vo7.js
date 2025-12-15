@@ -32,3 +32,5 @@ console.timeEnd("map2");
 console.time("find");
 const user = secondUserList.find((user) => user.userId === 20);
 console.timeEnd("find");
+
+//day 3
