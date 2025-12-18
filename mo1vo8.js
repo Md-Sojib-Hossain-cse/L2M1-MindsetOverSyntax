@@ -1,68 +1,60 @@
-const set = new Set();
+// const set = new Set();
 
 // set.add("apple");
-// set.add("mango");
+// set.add("orange");
 // set.add("banana");
 // set.add("apple");
+// set.add("orange");
 
+// console.log(set);
 // console.log(set.size);
 
-// const mezba = { username: "mezba" };
-// const sojib = { username: "sojib" };
-// const mahin = { username: "mahin" };
+// const aa = { userName: "sojib" };
+// const ab = { userName: "arif" };
+// const ac = { userName: "hossain" };
 
 // const set = new Set();
 
-// set.add(mezba);
-// set.add(sojib);
-// set.add(mahin);
-// set.add(sojib);
+// set.add(aa);
+// set.add(ac);
+// set.add(ab);
+// set.add(aa);
 
 // console.log(set);
+// console.log(set.size);
 
-// const arr = [1, 2, 4, 5, 3, 2];
+// const arr = ["apple", "mango", "banana", "apple"];
 
 // const set = new Set(arr);
 
-// set.forEach((item) => console.log(item));
-
-// console.log(set.has(2));
-
-// console.log(set);
-
-// console.log(set.delete(2));
-
-// console.log(set.delete(2));
-
-// console.log(set);
+// set.forEach((value) => {
+//   console.log(value);
+// });
 
 // const test = Array.from(set);
 
 // console.log(test);
 
-const arr = ["banana", "apple", "tomato", "banana"];
+// console.log(set.has("apple"));
+// console.log(set.delete("apple"));
 
-// Brute force
+// console.log(set);
 
-const removeDuplicateArray = (arr) => {
-  const newArray = [];
+const arr = ["apple", "mango", "banana", "apple"];
 
-  arr.forEach((element) => {
-    if (!newArray.includes(element)) {
-      newArray.push(element);
+const removeDupArr = (array) => {
+  const newArr = [];
+  array.forEach((value) => {
+    if (!newArr.includes(value)) {
+      newArr.push(value);
     }
   });
 
-  return newArray;
+  return newArr;
 };
 
-console.log(removeDuplicateArray(arr));
-
-// set implementation
-
-const removeDuplicateSet = (arr) => {
-  const set = new Set(arr);
+const removeDupSet = (array) => {
+  const set = new Set(array);
 
   return Array.from(set);
 };
-console.log(removeDuplicateSet(arr));
