@@ -1,36 +1,41 @@
-const startTime = performance.now();
+// const startTime = performance.now();
 
-for (let i = 0; i <= 20; i++) {
-  console.log(i);
-}
+// console.time("task");
 
-const endTime = performance.now();
+// for (let i = 0; i >= 1000; i++) {
+//   console.log(i);
+// }
 
-console.log(`This code took : ${endTime - startTime}`);
+// console.log(performance);
+// console.timeEnd("task");
+// const endTime = performance.now();
+
+// console.log(`This code took ${endTime - startTime}`);
 
 const firstArray = [];
 const secondArray = [];
 
-for (i = 0; i < 500; i++) {
-  if (i < 250) {
+for (i = 0; i < 50000; i++) {
+  if (i < 30000) {
     firstArray.push(i);
   }
   secondArray.push(i);
 }
 
-console.log("first array", firstArray.length);
-console.log("second array", secondArray.length);
+console.log(firstArray.length);
 
-console.time("map1");
-const firstUserList = firstArray.map((number) => ({ userId: number }));
-console.timeEnd("map1");
+console.log(secondArray.length);
 
-console.time("map2");
-const secondUserList = secondArray.map((number) => ({ userId: number }));
-console.timeEnd("map2");
-
-console.time("find");
-const user = secondUserList.find((user) => user.userId === 20);
-console.timeEnd("find");
-
-//day 3
+console.time("first");
+const data = firstArray.map((number) => {
+  userId: number;
+});
+console.timeEnd("first");
+console.time("second");
+const data2 = secondArray.map((number) => {
+  userId: number;
+});
+console.timeEnd("second");
+console.time("third");
+const data3 = secondArray.find((number) => number === 30);
+console.timeEnd("third");
